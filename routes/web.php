@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,3 +37,6 @@ Route::get('/about', function(){
 Route::get('/articles/{id}', function($id){
     echo "Ini adalah Halaman artikel dengan ID: ".$id;
 });
+
+//Praktikum 2 Resource /
+Route::get('/', [PageController::class,'index']);
