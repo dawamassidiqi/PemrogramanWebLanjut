@@ -40,3 +40,9 @@ Route::get('/articles/{id}', function($id){
 
 //Praktikum 2 Resource /
 Route::get('/', [PageController::class,'index']);
+
+//Praktikum 2 Resource /about
+Route::get('/about', [PageController::class,'about']);
+
+//Praktikum 2 Resource /articles/{id}
+Route::get('/articles/{id}', [PageController::class, 'articles']);
