@@ -19,7 +19,16 @@ Route::get('/', function () {
 */
 
 //Jobsheet 2
+
 //Praktikum 1 URL /
 Route::get('/', function(){
     echo "Selamat Datang";
 });
+
+//Praktikum 1 URL /about
+Route::get('/about', function(){
+    echo "2041720181 <br>";
+    echo "Dawam Ilhami Assidiqi <br>";
+    echo "TI-2H";
+});
+
