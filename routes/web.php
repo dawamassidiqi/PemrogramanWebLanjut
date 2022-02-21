@@ -32,3 +32,7 @@ Route::get('/about', function(){
     echo "TI-2H";
 });
 
+//Praktikum 1 URL /articles/{id}
+Route::get('/articles/{id}', function($id){
+    echo "Ini adalah Halaman artikel dengan ID: ".$id;
+});
