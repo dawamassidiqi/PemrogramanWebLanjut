@@ -12,7 +12,14 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+/* Jobsheet 1
 Route::get('/', function () {
     return view('welcome');
+});
+*/
+
+//Jobsheet 2
+//Praktikum 1 Nomer 1
+Route::get('/', function(){
+    echo "Selamat Datang";
 });
