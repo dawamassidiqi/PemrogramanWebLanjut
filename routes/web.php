@@ -19,7 +19,7 @@ Route::get('/', function () {
 */
 
 //Jobsheet 2
-//Praktikum 1 Nomer 1
+//Praktikum 1 URL /
 Route::get('/', function(){
     echo "Selamat Datang";
 });
