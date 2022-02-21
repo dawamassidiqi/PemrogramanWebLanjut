@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PageController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ArticleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,7 +22,7 @@ Route::get('/', function () {
 */
 
 //Jobsheet 2
-
+/*
 //Praktikum 1 URL /
 Route::get('/', function(){
     echo "Selamat Datang";
@@ -39,10 +41,15 @@ Route::get('/articles/{id}', function($id){
 });
 
 //Praktikum 2 Resource /
-Route::get('/', [PageController::class,'index']);
+Route::get('/', [HomeController::class,'index']);
 
 //Praktikum 2 Resource /about
-Route::get('/about', [PageController::class,'about']);
+Route::get('/about', [AboutController::class,'about']);
 
 //Praktikum 2 Resource /articles/{id}
-Route::get('/articles/{id}', [PageController::class, 'articles']);
+Route::get('/articles/{id}', [ArticleController::class, 'articles']);
+*/
+
+Route::get('/', function () {
+    return view('educastudio');
+});
