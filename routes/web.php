@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\ChambController;
 
 /*
 |--------------------------------------------------------------------------
@@ -50,6 +51,11 @@ Route::get('/about', [AboutController::class,'about']);
 Route::get('/articles/{id}', [ArticleController::class, 'articles']);
 */
 
-Route::get('/', function () {
-    return view('educastudio');
-});
+// Route::get('/', function () {
+//     return view('educastudio');
+// });
+// Auth::routes();
+
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get("/", [ChambController::class, 'index']);
