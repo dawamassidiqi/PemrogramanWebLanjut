@@ -2,6 +2,6 @@
 
       @include('chamb.sidebar')
 
-      @yield('chamb.content')
+      @yield('content')
       
       @include('chamb.footer')
