@@ -59,11 +59,11 @@ Route::get('/articles/{id}', [ArticleController::class, 'articles']);
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 //Jobsheet 3
-Route::get("/", [ChambController::class, 'index']);
-Route::get("/aboutus", [ChambController::class, 'aboutus']);
-Route::get("/pricing", [ChambController::class, 'pricing']);
-Route::get("/productpage", [ChambController::class, 'productpage']);
-Route::get("/category", [ChambController::class, 'category']);
-Route::get("/cms", [ChambController::class, 'cms']);
-Route::get("/howitworks", [ChambController::class, 'howitworks']);
-Route::get("/profile", [ChambController::class, 'profile']);
+Route::get("/", [ChambController::class, 'index'])->name('home');
+Route::get("/aboutus", [ChambController::class, 'aboutus'])->name('aboutus');
+Route::get("/pricing", [ChambController::class, 'pricing'])->name('pricing');
+Route::get("/productpage", [ChambController::class, 'productpage'])->name('productpage');
+Route::get("/category", [ChambController::class, 'category'])->name('category');
+Route::get("/cms", [ChambController::class, 'cms'])->name('cms');
+Route::get("/howitworks", [ChambController::class, 'howitworks'])->name('howitworks');
+Route::get("/profile", [ChambController::class, 'profile'])->name('profile');
