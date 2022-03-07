@@ -58,6 +58,7 @@ Route::get('/articles/{id}', [ArticleController::class, 'articles']);
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+//Jobsheet 3
 Route::get("/", [ChambController::class, 'index']);
 Route::get("/aboutus", [ChambController::class, 'aboutus']);
 Route::get("/pricing", [ChambController::class, 'pricing']);
