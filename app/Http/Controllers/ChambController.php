@@ -2,13 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class ChambController extends Controller
 {
     //
     public function index() {
-        return view("chamb.index");
+        $products = Product::all();
+        return view("chamb.index", ['products' => $products]);
     }
     public function aboutus() {
         return view("chamb.about-us");
@@ -17,8 +19,10 @@ class ChambController extends Controller
         return view("chamb.pricing");
     }
 
-    public function productpage() {
-        return view("chamb.productpage");
+    public function productpage($id) {
+        $product = Product::find($id);
+
+        return view("chamb.productpage", ['product' => $product]);
     }
 
     public function category() {

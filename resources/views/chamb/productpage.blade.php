@@ -9,7 +9,7 @@
                      <li><a href="#">Forntpage </a></li>
                      <li class="active">Furniture</li>
                      <li class="active">Sofa</li>
-                     <li><a href="#">All setup Sofa</a></li>
+                     <li><a href="#">{{ $product->productName }}</a></li>
                   </ol>
                </div>
             </div>
@@ -20,7 +20,7 @@
             <div class="row">
                <div class="col-md-12">
                   <div class="prod-page-title">
-                     <h2>All setup Sofa</h2>
+                     <h2>{{ $product->productName }}</h2>
                      <p>By <span>Dex Morgan Mobilya</span></p>
                   </div>
                </div>
@@ -29,7 +29,7 @@
                <div class="col-md-2 col-sm-4">
                   <div class="left-profile-box-m prod-page">
                      <div class="pro-img">
-                        <img src="images/150x150.png" alt="#" />
+                        <img src="{{ asset('images/' . $product->gambar) }}" alt="#" />
                      </div>
                      <div class="pof-text">
                         <h3>Morgan Mobilya</h3>
@@ -41,7 +41,7 @@
                <div class="col-md-7 col-sm-8">
                   <div class="md-prod-page">
                      <div class="md-prod-page-in">
-                        <div class="page-preview">
+                        <!-- <div class="page-preview">
                            <div class="preview">
                               <div class="preview-pic tab-content">
                                  <div class="tab-pane active" id="pic-1"><img src="images/lag-60.png" alt="#" /></div>
@@ -56,35 +56,35 @@
                                  <li><a data-target="#pic-4" data-toggle="tab"><img src="images/lag-61.png" alt="#" /></a></li>
                               </ul>
                            </div>
-                        </div>
+                        </div> -->
                         <div class="btn-dit-list clearfix">
                            <div class="left-dit-p">
                               <div class="prod-btn">
                                  <a href="#"><i class="fa fa-star" aria-hidden="true"></i> Save to wishlist</a>
                                  <a href="#"><i class="fa fa-thumbs-up" aria-hidden="true"></i> Like this</a>
-                                 <p>23 likes</p>
+                                 <p>{{$product->like}}</p>
                               </div>
                            </div>
                            <div class="right-dit-p">
                               <div class="like-list">
                                  <ul>
                                     <li>
-                                       <div class="im-b"><img class="" src="images/list-img-01.png" alt=""></div>
+                                       <div class="im-b"><img class="" src="{{ asset('images/list-img-01.png') }}" alt=""></div>
                                     </li>
                                     <li>
-                                       <div class="im-b"><img src="images/list-img-02.png" alt=""></div>
+                                       <div class="im-b"><img src="{{asset('images/list-img-02.png')}}" alt=""></div>
                                     </li>
                                     <li>
-                                       <div class="im-b"><img src="images/list-img-03.png" alt=""></div>
+                                       <div class="im-b"><img src="{{asset('images/list-img-03.png')}}" alt=""></div>
                                     </li>
                                     <li>
-                                       <div class="im-b"><img src="images/list-img-04.png" alt=""></div>
+                                       <div class="im-b"><img src="{{asset('images/list-img-04.png')}}" alt=""></div>
                                     </li>
                                     <li>
-                                       <div class="im-b"><img src="images/list-img-05.png" alt=""></div>
+                                       <div class="im-b"><img src="{{asset('images/list-img-05.png')}}" alt=""></div>
                                     </li>
                                     <li>
-                                       <div class="im-b"><img src="images/list-img-06.png" alt=""></div>
+                                       <div class="im-b"><img src="{{asset('images/list-img-06.png')}}" alt=""></div>
                                     </li>
                                     <li>
                                        <div class="im-b"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></div>
@@ -97,10 +97,7 @@
                      <div class="description-box">
                         <div class="dex-a">
                            <h4>Description</h4>
-                           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                              lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                              when an unknown printer took a galley of type and scrambled it to make a 
-                              type specimen book..
+                           <p>{{$product->desc}}
                            </p>
                            <br>
                            <p>Small: H 25 cm / &Oslash; 12 cm</p>
@@ -114,7 +111,7 @@
                                     <h5>Measurments</h5>
                                  </div>
                                  <div class="col-md-8">
-                                    <p>H25 cm / 0 12 cm and H 24 cm / 0 25 cm</p>
+                                    <p>{{$product->measurments}}</p>
                                  </div>
                               </li>
                               <li class="clearfix">
@@ -122,7 +119,7 @@
                                     <h5>Material</h5>
                                  </div>
                                  <div class="col-md-8">
-                                    <p>Material Name</p>
+                                    <p>{{$product->material}}</p>
                                  </div>
                               </li>
                               <li class="clearfix">
@@ -130,7 +127,7 @@
                                     <h5>Wire</h5>
                                  </div>
                                  <div class="col-md-8">
-                                    <p>Wire Name</p>
+                                    <p>{{$product->wire}}</p>
                                  </div>
                               </li>
                               <li class="clearfix">
@@ -138,7 +135,7 @@
                                     <h5>Comdition</h5>
                                  </div>
                                  <div class="col-md-8">
-                                    <p>Brand new</p>
+                                    <p>{{$product->condition}}</p>
                                  </div>
                               </li>
                               <li class="clearfix">
@@ -146,7 +143,7 @@
                                     <h5>SKU number</h5>
                                  </div>
                                  <div class="col-md-8">
-                                    <p>SKU number</p>
+                                    <p>{{$product->skuNumber}}</p>
                                  </div>
                               </li>
                               <li class="clearfix">
@@ -154,7 +151,7 @@
                                     <h5>Shipping</h5>
                                  </div>
                                  <div class="col-md-8">
-                                    <p>Shipping worldwide</p>
+                                    <p>{{$product->shipping}}</p>
                                  </div>
                               </li>
                               <li class="clearfix">
@@ -162,7 +159,7 @@
                                     <h5>Warranty</h5>
                                  </div>
                                  <div class="col-md-8">
-                                    <p>1 years</p>
+                                    <p>{{$product->warranty}}</p>
                                  </div>
                               </li>
                               <li class="clearfix">
@@ -170,7 +167,7 @@
                                     <h5>Delivery</h5>
                                  </div>
                                  <div class="col-md-8">
-                                    <p>Choose country</p>
+                                    <p>{{$product->delivery}}</p>
                                  </div>
                               </li>
                            </ul>
@@ -183,7 +180,7 @@
                         <div class="col-md-6">
                            <div class="small-box-c">
                               <div class="small-img-b">
-                                 <img class="img-responsive" src="images/tr1.png" alt="#" />
+                                 <img class="img-responsive" src="{{asset('images/tr1.png')}}" alt="#" />
                               </div>
                               <div class="dit-t clearfix">
                                  <div class="left-ti">
@@ -202,7 +199,7 @@
                         <div class="col-md-6">
                            <div class="small-box-c">
                               <div class="small-img-b">
-                                 <img class="img-responsive" src="images/tr2.png" alt="#" />
+                                 <img class="img-responsive" src="{{asset('images/tr3.png')}}" alt="#" />
                               </div>
                               <div class="dit-t clearfix">
                                  <div class="left-ti">
@@ -223,7 +220,7 @@
                         <div class="col-md-6">
                            <div class="small-box-c">
                               <div class="small-img-b">
-                                 <img class="img-responsive" src="images/tr3.png" alt="#" />
+                                 <img class="img-responsive" src="{{asset('images/tr4.png')}}" alt="#" />
                               </div>
                               <div class="dit-t clearfix">
                                  <div class="left-ti">
@@ -242,7 +239,7 @@
                         <div class="col-md-6">
                            <div class="small-box-c">
                               <div class="small-img-b">
-                                 <img class="img-responsive" src="images/tr4.png" alt="#" />
+                                 <img class="img-responsive" src="{{asset('images/tr2.png')}}" alt="#" />
                               </div>
                               <div class="dit-t clearfix">
                                  <div class="left-ti">
@@ -264,7 +261,7 @@
                <div class="col-md-3 col-sm-12">
                   <div class="price-box-right">
                      <h4>Price</h4>
-                     <h3>$1.320 <span>pr.peice</span></h3>
+                     <h3>{{$product->price}} <span>pr.peice</span></h3>
                      <p>Option</p>
                      <select class="form-control select2">
                         <option>Flying Carpet Green rug</option>

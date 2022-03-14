@@ -62,7 +62,7 @@ Route::get('/articles/{id}', [ArticleController::class, 'articles']);
 Route::get("/", [ChambController::class, 'index'])->name('home');
 Route::get("/aboutus", [ChambController::class, 'aboutus'])->name('aboutus');
 Route::get("/pricing", [ChambController::class, 'pricing'])->name('pricing');
-Route::get("/productpage", [ChambController::class, 'productpage'])->name('productpage');
+Route::get("/productpage/{id}", [ChambController::class, 'productpage'])->name('productpage');
 Route::get("/category", [ChambController::class, 'category'])->name('category');
 Route::get("/cms", [ChambController::class, 'cms'])->name('cms');
 Route::get("/howitworks", [ChambController::class, 'howitworks'])->name('howitworks');

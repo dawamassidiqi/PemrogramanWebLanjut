@@ -31,16 +31,17 @@
                   </div>
                </div>
                <div class="row clearfix">
+                  @foreach ($products as $product)
                   <div class="col-lg-3 col-sm-6 col-md-3">
-                     <a href="{{route('productpage')}}">
+                  <a href="{{route('productpage', ['id' => $product->id])}}">
                         <div class="box-img">
-                           <h4>Product</h4>
-                           <img src="images/product/1.png" alt="" />
+                           <h4>{{ $product->productName }}</h4>
+                           <img src="{{ asset('images/' . $product->gambar) }}" alt="" />
                         </div>
                      </a>
                   </div>
-                  <div class="col-lg-3 col-sm-6 col-md-3">
-                     <a href="{{route('productpage')}}">
+                  @endforeach
+                  <!-- <div class="col-lg-3 col-sm-6 col-md-3">
                         <div class="box-img">
                            <h4>Product</h4>
                            <img src="images/product/2.png" alt="" />
@@ -48,7 +49,6 @@
                      </a>
                   </div>
                   <div class="col-lg-3 col-sm-6 col-md-3">
-                     <a href="{{route('productpage')}}">
                         <div class="box-img">
                            <h4>Product</h4>
                            <img src="images/product/4.png" alt="" />
@@ -56,7 +56,6 @@
                      </a>
                   </div>
                   <div class="col-lg-3 col-sm-6 col-md-3">
-                     <a href="{{route('productpage')}}">
                         <div class="box-img">
                            <h4>Product</h4>
                            <img src="images/product/5.png" alt="" />
@@ -64,7 +63,6 @@
                      </a>
                   </div>
                   <div class="col-lg-3 col-sm-6 col-md-3">
-                     <a href="{{route('productpage')}}">
                         <div class="box-img">
                            <h4>Product</h4>
                            <img src="images/product/10.png" alt="" />
@@ -72,7 +70,6 @@
                      </a>
                   </div>
                   <div class="col-lg-3 col-sm-6 col-md-3">
-                     <a href="{{route('productpage')}}">
                         <div class="box-img">
                            <h4>Product</h4>
                            <img src="images/product/11.png" alt="" />
@@ -80,7 +77,6 @@
                      </a>
                   </div>
                   <div class="col-lg-3 col-sm-6 col-md-3">
-                     <a href="{{route('productpage')}}">
                         <div class="box-img">
                            <h4>Product</h4>
                            <img src="images/product/12.png" alt="" />
@@ -88,13 +84,12 @@
                      </a>
                   </div>
                   <div class="col-lg-3 col-sm-6 col-md-3">
-                     <a href="{{route('productpage')}}">
                         <div class="box-img">
                            <h4>Product</h4>
                            <img src="images/product/13.png" alt="" />
                         </div>
                      </a>
-                  </div>
+                  </div> -->
                   <div class="categories_link">
                      <a href="#">Browse all categories here</a>
                   </div>
