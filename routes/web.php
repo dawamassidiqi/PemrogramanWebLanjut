@@ -67,3 +67,7 @@ Route::get("/category", [ChambController::class, 'category'])->name('category');
 Route::get("/cms", [ChambController::class, 'cms'])->name('cms');
 Route::get("/howitworks", [ChambController::class, 'howitworks'])->name('howitworks');
 Route::get("/profile", [ChambController::class, 'profile'])->name('profile');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
