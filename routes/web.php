@@ -1,10 +1,11 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AboutController;
-use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\ChambController;
+use App\Http\Controllers\ArticleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -59,15 +60,16 @@ Route::get('/articles/{id}', [ArticleController::class, 'articles']);
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 //Jobsheet 3
-Route::get("/", [ChambController::class, 'index'])->name('home');
-Route::get("/aboutus", [ChambController::class, 'aboutus'])->name('aboutus');
-Route::get("/pricing", [ChambController::class, 'pricing'])->name('pricing');
-Route::get("/productpage/{id}", [ChambController::class, 'productpage'])->name('productpage');
-Route::get("/category", [ChambController::class, 'category'])->name('category');
-Route::get("/cms", [ChambController::class, 'cms'])->name('cms');
-Route::get("/howitworks", [ChambController::class, 'howitworks'])->name('howitworks');
-Route::get("/profile", [ChambController::class, 'profile'])->name('profile');
+// Route::get("/", [ChambController::class, 'index'])->name('home');
+// Route::get("/aboutus", [ChambController::class, 'aboutus'])->name('aboutus');
+// Route::get("/pricing", [ChambController::class, 'pricing'])->name('pricing');
+// Route::get("/productpage/{id}", [ChambController::class, 'productpage'])->name('productpage');
+// Route::get("/category", [ChambController::class, 'category'])->name('category');
+// Route::get("/cms", [ChambController::class, 'cms'])->name('cms');
+// Route::get("/howitworks", [ChambController::class, 'howitworks'])->name('howitworks');
+// Route::get("/profile", [ChambController::class, 'profile'])->name('profile');
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::resource('articles', ArticleController::class);
